@@ -25,3 +25,7 @@ Route::get('/products/{$id}', 'PagesController@show');
 Route::resource('/admin/products', 'ProductsController');
 Route::get('/admin/products/{$id}', 'ProductsController@show');
 Route::post('/admin/products/create', 'ProductsController@create');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
