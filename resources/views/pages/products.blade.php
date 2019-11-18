@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.visitor')
+
 @section('content')    
-    <h3 class="mt-3">Products</h3>
+<h3 class="mt-3">Products</h3>
 
     @if(count($products) > 0)
         @foreach($products as $p)
