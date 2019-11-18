@@ -1,0 +1,51 @@
+@extends('layouts.app')
+@section('content')    
+    <h3 class="mt-3">Products</h3>
+
+    <div class="float-right">
+    <a href="/admin/products/create" class="btn btn-primary">Add Product</a>
+    </div>
+    
+    @if(count($products) > 0)
+        <table class="table table-hover, mt-2">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Category</th>
+                <th scope="col">Image</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+        @foreach($products as $p)
+            <tbody>
+                <tr>
+                <th scope="row"><a href="/admin/products/{{$p->id}}">{{$p->name}}</a></th>
+                  <td>{{$p->price}}</td>
+                  <td>{{$p->category}}</td>
+                  <td>{{$p->image}}</td>
+                  <td>{{$p->stock}}</td>
+                <td>
+                  <a href="/admin/products/{{$p->id}}/edit" class="btn btn-info">Edit</a>
+
+                  {!!Form::open(['action' => ['ProductsController@destroy', $p->id], 
+            'method' => 'POST', 'class' => 'd-inline p-2']) !!}
+                    {{Form::hidden('_method', 'DELETE')}}
+                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+            {!!Form::close()!!}
+                </td>
+
+                </tr>
+            </tbody>
+            
+                
+        @endforeach
+        </table>
+        {{$products->links()}}
+    @else
+        <h5>Nothing here . . </h5>
+    @endif
+
+@endsection
+
