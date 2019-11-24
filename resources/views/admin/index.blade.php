@@ -24,7 +24,9 @@
                 <th scope="row"><a href="/admin/products/{{$p->id}}">{{$p->name}}</a></th>
                   <td>{{$p->price}}</td>
                   <td>{{$p->category}}</td>
-                  <td>{{$p->image}}</td>
+                  <td>
+                    <img width="100" src="/storage/cover_images/{{$p->cover_image}}" >
+                  </td>
                   <td>{{$p->stock}}</td>
                 <td>
                   <a href="/admin/products/{{$p->id}}/edit" class="btn btn-info">Edit</a>

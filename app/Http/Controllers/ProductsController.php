@@ -39,19 +39,35 @@ class ProductsController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'price' => 'required',
-            'description' => 'required'
+            'cover_image' => 'image|nullable|max:1999'
         ]);
+
+        //handle file
+        if($request->hasFile('cover_image')){
+            //getFilename
+            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+            $filename =pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+            $fileNametoStore = $filename .'_'.time() . '.' . $extension;
+
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNametoStore);            
+
+        }else{
+            $fileNametoStore = 'noImage.jpg';
+        }
+
 
         $p = new Product; 
         $p->name = $request->input('name');
         $p->price = $request->input('price');
-        // $p->stock = $request->input('stock');
-        $p->image = "null";
-        $p->stock = 10;
-        $p->category = "A";
-
-        // $p->category = $request->input('category');
+        $p->stock = $request->input('stock');
+        $p->category = $request->input('category');
         $p->desc = $request->input('description');
+        $p->cover_image = $fileNametoStore;
+        
         $p->save();
         
         return redirect('admin/products')->with('success', 'Product successfully added');
@@ -79,19 +95,34 @@ class ProductsController extends Controller
         $this->validate($request,[
             'name' => 'required',
             'price' => 'required',
-            'description' => 'required'
+            'cover_image' => 'image|nullable|max:1999'
         ]);
+
+        //handle file
+        if($request->hasFile('cover_image')){
+            //getFilename
+            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+            $filename =pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+            $fileNametoStore = $filename .'_'.time() . '.' . $extension;
+
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNametoStore);            
+
+        }else{
+            $fileNametoStore = 'noImage.jpg';
+        }
+
 
         $p = Product::find($id); 
         $p->name = $request->input('name');
         $p->price = $request->input('price');
-        // $p->stock = $request->input('stock');
-        $p->image = "null";
-        $p->stock = 10;
-        $p->category = "A";
-
-        // $p->category = $request->input('category');
+        $p->stock = $request->input('stock');
+        $p->category = $request->input('category');
         $p->desc = $request->input('description');
+        $p->cover_image = $fileNametoStore;
         $p->save();
         
         return redirect('admin/products')->with('success', 'Product Updated');
