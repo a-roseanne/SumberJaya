@@ -480,7 +480,7 @@
 						<div class="col">
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-start">
 								<div class="copyright order-md-1 order-2"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Sumber Jaya Store and Fashion Display</div>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> &copy; All rights reserved | Sumber Jaya Store and Fashion Display</div>
 								
 							</div>
 						</div>

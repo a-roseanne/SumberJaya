@@ -22,8 +22,12 @@ Route::get('/about', 'PagesController@about');
 Route::get('/products', 'PagesController@products');
 Route::get('/products/{$id}', 'PagesController@show');
 
+Route::get('/admin', 'ProductsController@admin');
+
 Route::resource('/admin/products', 'ProductsController');
+
 Route::get('/admin/products/{$id}', 'ProductsController@show');
+
 Route::post('/admin/products/create', 'ProductsController@create');
 
 Auth::routes();

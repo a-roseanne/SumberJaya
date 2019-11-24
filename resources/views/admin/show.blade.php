@@ -5,10 +5,14 @@
 
     <h2>Admin </h2>
     
-    <h5>Name : {{$products->name}}</h5>
+    <h5>{{$products->name}}</h5>
 
-    <h5>Price : {{$products->price}}</h5>
+    <img width="100" src="/storage/cover_images/{{$products->cover_image}}" >
 
+    <h5>{{$products->price}}</h5>
+
+    
+    
 
     <a href="/admin/products" class="btn btn-primary">Back to list</a>
 

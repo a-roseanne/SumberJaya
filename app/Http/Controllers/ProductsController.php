@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Product;
 class ProductsController extends Controller
 {
@@ -14,7 +15,13 @@ class ProductsController extends Controller
     public function index()
     {
         $products=Product::orderBy('name', 'asc')->paginate(5);
-        return view('admin.index')->with('products', $products);
+        return view('admin.products')->with('products', $products);
+    }
+
+    public function admin()
+    {
+        return view('admin.index');
+        
     }
 
     /**
@@ -111,8 +118,6 @@ class ProductsController extends Controller
 
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNametoStore);            
 
-        }else{
-            $fileNametoStore = 'noImage.jpg';
         }
 
 
@@ -122,7 +127,9 @@ class ProductsController extends Controller
         $p->stock = $request->input('stock');
         $p->category = $request->input('category');
         $p->desc = $request->input('description');
-        $p->cover_image = $fileNametoStore;
+        if($request->hasFile('cover_image')){
+            $p->cover_image = $fileNametoStore;
+        }
         $p->save();
         
         return redirect('admin/products')->with('success', 'Product Updated');
@@ -137,7 +144,13 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
+
+        
         $products = Product::find($id);
+        if($products->cover_image != 'noImage.jpg'){
+            Storage::delete('public/cover_images/'.$products->cover_image);
+        }
+
         $products->delete();
         return redirect('admin/products')->with('success', 'Product Removed');
 
