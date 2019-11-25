@@ -72,7 +72,7 @@
                              with font-awesome or any other icon font library -->
                         
                         <li class="nav-item">
-                          <a href="admin/" class="nav-link">
+                          <a href="{{url('admin')}}" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                               Dashboard                {{-- <span class="right badge badge-danger">New</span> --}}

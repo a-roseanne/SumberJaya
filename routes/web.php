@@ -26,6 +26,7 @@ Route::get('/admin', 'ProductsController@admin');
 
 Route::resource('/admin/products', 'ProductsController');
 
+
 Route::get('/admin/products/{$id}', 'ProductsController@show');
 
 Route::post('/admin/products/create', 'ProductsController@create');

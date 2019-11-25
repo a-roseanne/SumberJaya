@@ -40,7 +40,7 @@
 			<li><a href="{{url('/products')}}">Products</a></li>
 			<li><a href="{{url('/about')}}">About</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
-			<li><a href="{{url('/admin/products')}}">Admin</a></li>
+			<li><a href="{{url('/admin/')}}">Admin</a></li>
 		</ul>
 	</div>
 	<!-- Contact Info -->
