@@ -111,7 +111,7 @@
 
     <footer class="main-footer">
             <strong>&copy;
-                All rights reserved | Sumber Jaya Store and Fashion Display
+               2019 | Sumber Jaya Store and Fashion Display
     </footer>
 
     

@@ -29,13 +29,15 @@ Products
                   <td>{{$p->price}}</td>
                   <td>
                       @if ($p->category== 0)
-                        <p>Manekin</p> 
-                      @elseif ($p->category == 1)
                         <p>Bracket</p> 
+                      @elseif ($p->category == 1)
+                        <p>Hanger</p> 
                       @elseif ($p->category == 2)
+                        <p>Manekin</p>
+                      @elseif ($p->category == 3)
                         <p>Rak</p>
                       @else
-                        <p>Lain - Lain</p>
+                        <p>Lainnya</p>
                       @endif
                   </td>
                   <td>

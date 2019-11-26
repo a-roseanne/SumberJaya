@@ -14,7 +14,8 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('pages.index');
+        $products=Product::all()->random(6);
+        return view('pages.index')->with('products', $products);
     }
 
     public function about()
