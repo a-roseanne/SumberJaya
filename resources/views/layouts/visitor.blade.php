@@ -42,15 +42,16 @@
 			<li><a href="{{url('/products')}}">Products</a></li>
 			<li><a href="{{url('/about')}}">About</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
-			<li><a href="{{url('/admin/')}}">Admin</a></li>
+			<li><a href="{{url('/admin')}}">Admin</a></li>
     </ul>
    </nav>
    <div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
     <!-- Search -->
     <div class="header_search">
-     <form action="#" id="header_search_form">
-      <input type="text" class="search_input" placeholder="Search Item" required="required">
-      <button class="header_search_button"><img src="images/search.png" alt=""></button>
+     <form action="{{url('products/find')}}" id="header_search_form" method="GET">
+      <input type="text" name="find" class="search_input" placeholder="Search Item">
+	  <button class="header_search_button"><img src="images/search.png" alt=""></button>
+	  
      </form>
     </div>
     <!-- User -->
@@ -60,7 +61,7 @@
     <!-- Phone -->
     <div class="header_phone d-flex flex-row align-items-center justify-content-start">
      <div><div><img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
-     <div>0877 -061 - 0777</div>
+     <div>0877 -0261 - 0777</div>
     </div>
    </div>
   </div>

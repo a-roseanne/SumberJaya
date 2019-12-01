@@ -125,11 +125,14 @@ class ProductsController extends Controller
         $p->name = $request->input('name');
         $p->price = $request->input('price');
         $p->stock = $request->input('stock');
+        
         $p->category = $request->input('category');
         $p->desc = $request->input('description');
+        
         if($request->hasFile('cover_image')){
             $p->cover_image = $fileNametoStore;
         }
+
         $p->save();
         
         return redirect('admin/products')->with('success', 'Product Updated');

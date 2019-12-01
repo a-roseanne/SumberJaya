@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+// use App\Http\Controllers\DB;
+use DB;
 
 class PagesController extends Controller
 {
@@ -16,6 +18,15 @@ class PagesController extends Controller
     {
         $products=Product::all()->random(6);
         return view('pages.index')->with('products', $products);
+    }
+
+    public function find(Request $req)
+    {
+        $req = $req->find;
+        $products=Product::where('name', 'LIKE', '%' . $req . '%' );
+        // $products = DB::table('products')->where('name','like',"%".$req."%");
+        $products->count();
+        return view('pages.products')->with('products', $products);
     }
 
     public function about()

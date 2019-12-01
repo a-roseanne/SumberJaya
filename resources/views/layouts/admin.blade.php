@@ -80,7 +80,7 @@
                           </a>
                         </li>
                         <li class="nav-item">
-                                <a href="admin/products/" class="nav-link">
+                                <a href="{{url('admin/products')}}" class="nav-link">
                                   <i class="nav-icon fas fa-th"></i>
                                   <p>
                                     Products                {{-- <span class="right badge badge-danger">New</span> --}}
@@ -102,10 +102,11 @@
                           <h1 class="m-0 text-dark">@yield('title')</h1>
                         </div><!-- /.col -->
                       </div><!-- /.row -->
+                      @yield('content')
                     </div><!-- /.container-fluid -->
                   </div>
                   <!-- /.content-header -->
-    @yield('content')
+    
 
     </div>
 
