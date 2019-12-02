@@ -21,6 +21,7 @@ Route::get('/about', 'PagesController@about');
 
 Route::get('/products', 'PagesController@products');
 Route::get('/products/{$id}', 'PagesController@show');
+Route::get('/products/find', 'PagesController@find');
 
 Route::get('/admin', 'ProductsController@admin');
 

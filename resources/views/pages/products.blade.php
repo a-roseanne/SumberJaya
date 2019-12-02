@@ -1,8 +1,30 @@
 @extends('layouts.visitor')
 
-@section('content')    
-    <h3 class="mt-3">Products</h3>
 
+@section('content')
+
+<div class="products">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="section_title text-center">Products</div>
+      </div>
+    </div>
+
+    <div class="row page_nav_row">
+      <div class="col ">
+        <div class="page_nav">
+          <ul class="d-flex flex-row align-items-start justify-content-center">
+            <li class="active"><a href="category.html">Bracket</a></li>
+            <li><a href="category.html">Hanger</a></li>
+            <li><a href="category.html">Manekin</a></li>
+            <li><a href="category.html">Rack</a></li>
+            <li><a href="category.html">Lainnya</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="super-container mt-5 ml-4" >
     @if(count($products) > 0)
         @foreach($products as $p)
         <div class="card, d-inline-block" style="width: 18rem; margin-right:15px; border-radius:10px">
@@ -18,6 +40,5 @@
     @else
         <h5>Nothing here . . </h5>
     @endif
-
-
 @endsection
+</div>

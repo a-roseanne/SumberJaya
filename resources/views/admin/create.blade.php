@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')    
     <h1>Add Product</h1>
@@ -14,7 +14,7 @@
             <div class="form-group">
                 {{Form::label('category', 'Category : ')}}
                 {{Form::select('category', 
-                    ['Manekin', 'Bracket', 'Rak', 'Lainnya'], null, 
+                    ['Bracket','Hanger', 'Manekin', 'Rak', 'Lainnya'], null, 
                     ['placeholder' => 'Product Category'])}}
             </div>
                 

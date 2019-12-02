@@ -289,41 +289,43 @@
 
 		<!-- Products -->
 
-		<div class="products">
-			<div class="container">
+		
+		<div class="products ml-3">
 				<div class="row">
-					<div class="col-lg-6 offset-lg-3">
-						<div class="section_title text-center">Lengkapi Toko Anda Sekarang !</div>
-					</div>
-				</div>
-				<div class="row page_nav_row">
-					<div class="col">
-						<div class="page_nav">
-							<ul class="d-flex flex-row align-items-start justify-content-center">
-								<li class="active"><a href="category.html">Bracket</a></li>
-								<li><a href="category.html">Hanger</a></li>
-								<li><a href="category.html">Manekin</a></li>
-								<li><a href="category.html">Rack</a></li>
-							</ul>
+						<div class="col-lg-6 offset-lg-3">
+						  <div class="section_title text-center">Lengkapi Toko Anda Sekarang!</div>
 						</div>
-					</div>
 				</div>
-				<div class="row products_row">
-					
-					<!-- Product -->
-					<div class="col-xl-4 col-md-6">
+
+				@if(count($products) > 0)
+				@foreach($products as $p)
+    				<div class="col-xl-4 col-md-5 mt-3 d-inline-block">
 						<div class="product">
-							<div class="product_image"><img src="{{asset('img/two.jpg')}}" alt=""></div>
+							<div class="product_image"><img src="/storage/cover_images/{{$p->cover_image}}" alt=""></div>
 							<div class="product_content">
-								<div class="product_info d-flex flex-row align-items-start justify-content-start">
+								<div class="product_info d-flex flex-row align-items-start ">
 									<div>
 										<div>
-											<div class="product_name"><a href="product.html">Hanger Kayu</a></div>
-											<div class="product_category"><a href="category.html">hanger</a></div>
+											<div class="product_name" style="color:black">{{$p->name}}</div>
+											<div class="product_category"><a href="category.html">
+												<a>
+													@if ($p->category== 0)
+													<p>Bracket</p> 
+												  @elseif ($p->category == 1)
+													<p>Hanger</p> 
+												  @elseif ($p->category == 2)
+													<p>Manekin</p>
+												  @elseif ($p->category == 3)
+													<p>Rak</p>
+												  @else
+													<p>Lainnya</p>
+												  @endif
+												</a>
+											</div>
 										</div>
 									</div>
 									<div class="ml-auto text-right">
-										<div class="product_price text-right">Rp 85<span>k</span></div>
+										<div class="product_price text-right">Rp {{$p->price}}</div>
 									</div>
 								</div>
 								<div class="product_buttons">
@@ -332,17 +334,23 @@
 										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
 											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
 										</div>
+										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
+											<div><div><a href="/products/{{$p->id}}"><img src="images/more.svg" class="svg" alt=""></a></div></div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					
+					@endforeach
+					@else
+        				<h5>Nothing here . . </h5>
+    			@endif
+	
 				</div>
 				<div class="row load_more_row">
 					<div class="col">
-						<div class="button load_more ml-auto mr-auto"><a href="#">load more</a></div>
+						<div class="button load_more ml-auto mr-auto"><a href="/products">More</a></div>
 					</div>
 				</div>
 			</div>

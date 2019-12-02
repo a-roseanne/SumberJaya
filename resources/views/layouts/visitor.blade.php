@@ -8,19 +8,18 @@
 	<title>{{config('app.name')}}</title>
 
 	<title>{{config('app.name')}}</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Sumber Jaya">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{{asset('styles/bootstrap-4.1.2/bootstrap.min.css')}}">
-	<link href="{{asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('styles/main_styles.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{asset('styles/responsive.css')}}">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Sumber Jaya">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="{{asset('styles/bootstrap-4.1.2/bootstrap.min.css')}}">
+		<link href="{{asset('plugins/font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{asset('styles/main_styles.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{asset('styles/responsive.css')}}">
 	</head>
-
 <body>
 
 <!-- Header -->
@@ -44,15 +43,16 @@
 			<li><a href="{{url('/about')}}">About</a></li>
 			<li><a href="{{url('/post')}}">Blog</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
-			<li><a href="{{url('/admin/')}}">Admin</a></li>
+			<li><a href="{{url('/admin')}}">Admin</a></li>
     </ul>
    </nav>
    <div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
     <!-- Search -->
     <div class="header_search">
-     <form action="#" id="header_search_form">
-      <input type="text" class="search_input" placeholder="Search Item" required="required">
-      <button class="header_search_button"><img src="images/search.png" alt=""></button>
+     <form action="{{url('products/find')}}" id="header_search_form" method="GET">
+      <input type="text" name="find" class="search_input" placeholder="Search Item">
+	  <button class="header_search_button"><img src="images/search.png" alt=""></button>
+	  
      </form>
     </div>
     <!-- User -->
@@ -62,7 +62,7 @@
     <!-- Phone -->
     <div class="header_phone d-flex flex-row align-items-center justify-content-start">
      <div><div><img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
-     <div>0877 -061 - 0777</div>
+     <div>0877 -0261 - 0777</div>
     </div>
    </div>
   </div>
@@ -86,20 +86,22 @@
 			<li><a href="{{url('/products')}}">Products</a></li>
 			<li><a href="{{url('/about')}}">About</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
+<<<<<<< HEAD
 			<li><a href="{{url('/blogs/')}}">Admin</a></li>
 			<li><a href="{{url('/admin/')}}">Admin</a></li>
 
+=======
+			<li><a href="{{url('/admin')}}">Admin</a></li>
+>>>>>>> a1c60b38d8f15c4c995f1be1339ed12357e4ed82
 		</ul>
 	</div>
 	<!-- Contact Info -->
 	<div class="menu_contact">
-		<div class="menu_phone d-flex flex-row align-items-center justify-content-start">
-			<div><div><img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
-			<div>0877 -061 - 0777</div>
-		</div>
+
 		<div class="menu_social">
 			<ul class="menu_social_list d-flex flex-row align-items-start justify-content-start">
 				<li><a href="https:instagram.com/pusat.display"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="https:wa.me/6287702610777"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
 			</ul>
 		</div>
 	</div>
@@ -152,8 +154,13 @@
 						<div class="col">
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-start">
 								<div class="copyright order-md-1 order-2"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<<<<<<< HEAD
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> &copy; All rights reserved | Sumber Jaya Store and Fashion Display</div>
 
+=======
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> &copy; 2019 | Sumber Jaya Store and Fashion Display</div>
+								
+>>>>>>> a1c60b38d8f15c4c995f1be1339ed12357e4ed82
 							</div>
 						</div>
 					</div>

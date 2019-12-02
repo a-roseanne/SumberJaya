@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')    
     <h1>Edit Product</h1>
@@ -14,8 +14,8 @@
             <div class="form-group">
                     {{Form::label('category', 'Category : ')}}
                     {{Form::select('category', 
-                        ['Manekin', 'Bracket', 'Rak', 'Lainnya'], null, 
-                        ['placeholder' => 'Product Category'])}}
+                    ['Bracket','Hanger', 'Manekin', 'Rak', 'Lainnya'], null, 
+                    ['placeholder' => 'Product Category'])}}
             </div>
                     
             <div class="form-group">
@@ -40,8 +40,8 @@
                         'placeholder' => 'Description'])}}
                 </div>
     
-                <div class="form-group">
-                    {{Form::label('image', 'Image : ')}}
+                <div class="form-group" width="100">
+                    {{Form::label('image', $products->cover_image)}}
                     {{Form::file('cover_image')}}
                 </div>
             
