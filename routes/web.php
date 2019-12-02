@@ -34,3 +34,10 @@ Route::post('/admin/products/create', 'ProductsController@create');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/post','PostController@create')-> name('post.index');
+Route::get('/post/create','PostController@create')-> name('post.create');
+Route::get('/post/create','PostController@store')-> name('post.Store');
+Route::get('/post/{id}/edit','PostController@edit')->name('post.edit');
+
+Route::patch('/post/{id}/edit','PostController@update')->name('post.update');

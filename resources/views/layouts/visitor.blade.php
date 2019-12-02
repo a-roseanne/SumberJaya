@@ -4,9 +4,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-		
+
 	<title>{{config('app.name')}}</title>
-		
+
 	<title>{{config('app.name')}}</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@
       <div><img src="{{asset('img/logo.png')}}" alt=""  width="30" height="30"></div>
       <div>Sumber Jaya</div>
      </div>
-    </a> 
+    </a>
    </div>
    <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
    <nav class="main_nav">
@@ -42,6 +42,7 @@
      <li class="active"> <a href="{{url('/')}}">Home</a></li>
 			<li><a href="{{url('/products')}}">Products</a></li>
 			<li><a href="{{url('/about')}}">About</a></li>
+			<li><a href="{{url('/post')}}">Blog</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
 			<li><a href="{{url('/admin/')}}">Admin</a></li>
     </ul>
@@ -85,7 +86,9 @@
 			<li><a href="{{url('/products')}}">Products</a></li>
 			<li><a href="{{url('/about')}}">About</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
+			<li><a href="{{url('/blogs/')}}">Admin</a></li>
 			<li><a href="{{url('/admin/')}}">Admin</a></li>
+
 		</ul>
 	</div>
 	<!-- Contact Info -->
@@ -105,7 +108,7 @@
 
 
 @yield('content')
-	
+
 
 
 <!-- Footer -->
@@ -114,7 +117,7 @@
 			<div class="footer_content">
 				<div class="container">
 					<div class="row">
-						
+
 						<!-- About -->
 						<div class="col-lg-8 footer_col">
 							<div class="footer_about">
@@ -124,22 +127,22 @@
 											<div class="footer_logo_icon"><img src="{{asset('img/logo.png')}}"  width="30" height="30" alt=""></div>
 											<div>Sumber Jaya</div>
 										</div>
-									</a>		
+									</a>
 								</div>
 								<div class="footer_about_text">
 									<p>
-                                        Kami menyediakan berbagai macam kebutuhan display toko mulai dari manekin, 
-                                        hanger, gawang baju, tiang bracket, sticker kaca, ram, rak minimarket, 
+                                        Kami menyediakan berbagai macam kebutuhan display toko mulai dari manekin,
+                                        hanger, gawang baju, tiang bracket, sticker kaca, ram, rak minimarket,
                                         cantolan, keranjang snack dan masih banyak lagi.
                                         Kunjungi toko kami, Jl. Diponegoro 46 Mojosari.
                                     </p>
 								</div>
 							</div>
                         </div>
-                        
 
 
-						
+
+
 					</div>
 				</div>
 			</div>
@@ -150,7 +153,7 @@
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-start">
 								<div class="copyright order-md-1 order-2"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> &copy; All rights reserved | Sumber Jaya Store and Fashion Display</div>
-								
+
 							</div>
 						</div>
 					</div>

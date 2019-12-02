@@ -1,0 +1,3 @@
+- User (email,password) x
+- Post (id,title, content)
+- comment (id, post_id, user_id, message)
