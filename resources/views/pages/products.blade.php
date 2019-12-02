@@ -27,12 +27,13 @@
     <div class="super-container mt-5 ml-4" >
     @if(count($products) > 0)
         @foreach($products as $p)
-        <div class="card, d-inline-block" style="width: 18rem; margin-right:15px; border-radius:10px">
+        <div class="card, d-inline-block" style="width: 18rem; margin-right:15px; margin-top:15px; border-radius:10px; background-color:whitesmoke">
+
                 <img src="/storage/cover_images/{{$p->cover_image}}" class="card-img-top" width="180" height="286">
-                <div class="card-body">
-                  <h5 class="card-title">{{$p->name}}</h5>
-                  <p class="card-text">Rp {{$p->price}}</p>
-                  <a href="#" class="btn btn-primary">Add to Cart</a>
+                <div class="card-body" style="color:black">
+                  <h4 class="card-title">{{$p->name}}</h4>
+                  <p class="card-text" style="color:black" >Rp {{$p->price}}</p>
+                  <a href="#" class="btn btn-info">Add to Cart</a>
                   <a href="/products/{{$p->id}}" class="btn btn-primary">Details</a>
                 </div>
               </div>
