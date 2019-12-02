@@ -86,13 +86,9 @@
 			<li><a href="{{url('/products')}}">Products</a></li>
 			<li><a href="{{url('/about')}}">About</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
-<<<<<<< HEAD
-			<li><a href="{{url('/blogs/')}}">Admin</a></li>
-			<li><a href="{{url('/admin/')}}">Admin</a></li>
-
-=======
+			<li><a href="{{url('/post')}}">Blogs</a></li>
 			<li><a href="{{url('/admin')}}">Admin</a></li>
->>>>>>> a1c60b38d8f15c4c995f1be1339ed12357e4ed82
+
 		</ul>
 	</div>
 	<!-- Contact Info -->
@@ -154,13 +150,8 @@
 						<div class="col">
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-start">
 								<div class="copyright order-md-1 order-2"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<<<<<<< HEAD
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> &copy; All rights reserved | Sumber Jaya Store and Fashion Display</div>
-
-=======
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> &copy; 2019 | Sumber Jaya Store and Fashion Display</div>
 								
->>>>>>> a1c60b38d8f15c4c995f1be1339ed12357e4ed82
 							</div>
 						</div>
 					</div>

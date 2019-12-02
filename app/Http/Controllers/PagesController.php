@@ -41,7 +41,7 @@ class PagesController extends Controller
 
     public function show($id)
     {
-        $products=Product::find($id);
+        $products=Product::findOrFail($id);
         return view('pages.show')->with('products', $products);
     }
 

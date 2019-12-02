@@ -32,6 +32,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{$p->name}}</h5>
                   <p class="card-text">Rp {{$p->price}}</p>
+                  <a href="#" class="btn btn-primary">Add to Cart</a>
                   <a href="/products/{{$p->id}}" class="btn btn-primary">Details</a>
                 </div>
               </div>
@@ -40,5 +41,6 @@
     @else
         <h5>Nothing here . . </h5>
     @endif
-@endsection
+    
 </div>
+@endsection

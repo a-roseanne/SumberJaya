@@ -22,10 +22,9 @@ class PostController extends Controller
     public function store()
     {
         Post::create([
-          'title' => request('title'),
-          'content'=> request('content')
-
-        ])
+          'title' =>request('title'),
+          'content'=>request('content')
+        ]);
     }
 
     public function edit($id)
