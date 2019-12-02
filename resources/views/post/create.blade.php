@@ -1,7 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<div class="container">
+
+<h1>Add Post</h1>
+
   <form class="" action="{{route('post.store')}}" method="post">
     {{ csrf_field() }}
     <div class="form-group">
@@ -18,7 +20,6 @@
         <input type="submit" class="btn btn-primary " value="Save">
       </div>
   </form>
-</div>
 
 
 @endsection

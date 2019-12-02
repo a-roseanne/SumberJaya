@@ -3,7 +3,7 @@
 <div class="super_container">
 @section('content')    
 
-    <h3 class="mt-3">Product Details</h3>
+    <h3 class="mt-3" style="color:black">Product Details</h3>
 
     <h5>Name : {{$products->name}}</h5>
     <img width="500" src="/storage/cover_images/{{$products->cover_image}}" >
