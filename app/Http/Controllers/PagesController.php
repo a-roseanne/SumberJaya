@@ -18,6 +18,7 @@ class PagesController extends Controller
     {
         $products=Product::all()->random(6);
         return view('pages.index')->with('products', $products);
+    }
     public function find(Request $req)
     {
         $req = $req->find;
