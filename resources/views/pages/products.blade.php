@@ -42,6 +42,6 @@
     @else
         <h5>Nothing here . . </h5>
     @endif
-    
 </div>
+
 @endsection

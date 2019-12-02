@@ -1,18 +1,26 @@
 @extends('layouts.visitor')
 
-<div class="super_container">
 @section('content')    
+<div class="ml-5">
+    <br>
+    <br>
+    <h2 class="mt-5" style="color:black">Product Details</h2>
 
-    <h3 class="mt-3" >Product Details</h3>
-
-    <h5>Name : {{$products->name}}</h5>
+    <h3 style="color:black">Name : {{$products->name}}</h3>
     <img width="500" src="/storage/cover_images/{{$products->cover_image}}" >
 
-    <h5>Price : {{$products->price}}</h5>
+    <h3 style="color:black">Price : {{$products->price}}</h3>
 
-    <h5>Stock : {{$products->stock}}</h5>
+    <h3 style="color:black">Stock : {{$products->stock}}</h3>
 
-    <h5>Description : {{$products->desc}}</h5>
+    <h3 style="color:black">Description : {{$products->desc}}</h3>
 
-@endsection
+    <a href="#" class="btn btn-info">Add to Cart</a>
+
+    <a href="{{url('/products')}}" class="btn btn-primary">Back</a>
+
 </div>
+
+<br>
+<br>
+@endsection

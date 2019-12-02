@@ -55,13 +55,14 @@
 	  
      </form>
     </div>
-    <!-- User -->
-    <div class="user"><a href="#"><div><img src="images/user.svg" alt="https://www.flaticon.com/authors/freepik"><div>1</div></div></a></div>
+	<!-- User -->
+	
+    <div class="user"><a href="#"><div><img src="{{asset('images/user.svg')}}"><div>1</div></div></a></div>
     <!-- Cart -->
-    <div class="cart"><a href="cart.html"><div><img class="svg" src="images/cart.svg" alt="https://www.flaticon.com/authors/freepik"></div></a></div>
+    <div class="cart"><a href="cart.html"><div><img class="svg" src="{{asset('images/cart.svg')}}"></div></a></div>
     <!-- Phone -->
     <div class="header_phone d-flex flex-row align-items-center justify-content-start">
-     <div><div><img src="images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
+     <div><div><img src="{{asset('images/phone.svg')}}"></div></div>
      <div>0877 -0261 - 0777</div>
     </div>
    </div>
