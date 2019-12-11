@@ -7,155 +7,155 @@ use Illuminate\Support\Facades\Storage;
 use App\Product;
 class ProductsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $products=Product::orderBy('name', 'asc')->paginate(5);
-        return view('admin.products')->with('products', $products);
+  /**
+  * Display a listing of the resource.
+  *
+  * @return \Illuminate\Http\Response
+  */
+  public function index()
+  {
+    $products=Product::orderBy('name', 'asc')->paginate(5);
+    return view('admin.products')->with('products', $products);
+  }
+
+  public function admin()
+  {
+    return view('admin.index');
+
+  }
+
+  /**
+  * Show the form for creating a new resource.
+  *
+  * @return \Illuminate\Http\Response
+  */
+  public function create()
+  {
+
+    return view('admin.create');
+  }
+
+  /**
+  * Store a newly created resource in storage.
+  *
+  * @param  \Illuminate\Http\Request  $request
+  * @return \Illuminate\Http\Response
+  */
+  public function store(Request $request)
+  {
+    $this->validate($request,[
+      'name' => 'required',
+      'price' => 'required',
+      'cover_image' => 'image|nullable|max:1999'
+    ]);
+
+    //handle file
+    if($request->hasFile('cover_image')){
+      //getFilename
+      $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+      $filename =pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+      $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+      $fileNametoStore = $filename .'_'.time() . '.' . $extension;
+
+      $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNametoStore);
+
+    }else{
+      $fileNametoStore = 'noImage.jpg';
     }
 
-    public function admin()
-    {
-        return view('admin.index');
-        
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
+    $p = new Product;
+    $p->name = $request->input('name');
+    $p->price = $request->input('price');
+    $p->stock = $request->input('stock');
+    $p->category = $request->input('category');
+    $p->desc = $request->input('description');
+    $p->cover_image = $fileNametoStore;
 
-        return view('admin.create');
-    }
+    $p->save();
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $this->validate($request,[
-            'name' => 'required',
-            'price' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
-        ]);
+    return redirect('admin/products')->with('success', 'Product successfully added');
+  }
+  /**
+  * Display the specified resource.
+  *
+  * @param  int  $id
+  * @return \Illuminate\Http\Response
+  */
+  public function show($id)
+  {
+    $products=Product::find($id);
+    return view('admin.show')->with('products', $products);
+  }
 
-        //handle file
-        if($request->hasFile('cover_image')){
-            //getFilename
-            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
+  public function edit($id)
+  {
+    $products=Product::find($id);
+    return view('admin.edit')->with('products', $products);
+  }
 
-            $filename =pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+  public function update(Request $request, $id)
+  {
+    $this->validate($request,[
+      'name' => 'required',
+      'price' => 'required',
+      'cover_image' => 'image|nullable|max:1999'
+    ]);
 
-            $extension = $request->file('cover_image')->getClientOriginalExtension();
+    //handle file
+    if($request->hasFile('cover_image')){
+      //getFilename
+      $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
 
-            $fileNametoStore = $filename .'_'.time() . '.' . $extension;
+      $filename =pathinfo($fileNameWithExt, PATHINFO_FILENAME);
 
-            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNametoStore);            
+      $extension = $request->file('cover_image')->getClientOriginalExtension();
 
-        }else{
-            $fileNametoStore = 'noImage.jpg';
-        }
+      $fileNametoStore = $filename .'_'.time() . '.' . $extension;
 
-
-        $p = new Product; 
-        $p->name = $request->input('name');
-        $p->price = $request->input('price');
-        $p->stock = $request->input('stock');
-        $p->category = $request->input('category');
-        $p->desc = $request->input('description');
-        $p->cover_image = $fileNametoStore;
-        
-        $p->save();
-        
-        return redirect('admin/products')->with('success', 'Product successfully added');
-    }
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $products=Product::find($id);
-        return view('admin.show')->with('products', $products);
-    }
-
-    public function edit($id)
-    {
-        $products=Product::find($id);
-        return view('admin.edit')->with('products', $products);
-    }
-
-    public function update(Request $request, $id)
-    {
-        $this->validate($request,[
-            'name' => 'required',
-            'price' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
-        ]);
-
-        //handle file
-        if($request->hasFile('cover_image')){
-            //getFilename
-            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
-
-            $filename =pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-
-            $extension = $request->file('cover_image')->getClientOriginalExtension();
-
-            $fileNametoStore = $filename .'_'.time() . '.' . $extension;
-
-            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNametoStore);            
-
-        }
-
-
-        $p = Product::find($id); 
-        $p->name = $request->input('name');
-        $p->price = $request->input('price');
-        $p->stock = $request->input('stock');
-        
-        $p->category = $request->input('category');
-        $p->desc = $request->input('description');
-        
-        if($request->hasFile('cover_image')){
-            $p->cover_image = $fileNametoStore;
-        }
-
-        $p->save();
-        
-        return redirect('admin/products')->with('success', 'Product Updated');
+      $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNametoStore);
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
 
-        
-        $products = Product::find($id);
-        if($products->cover_image != 'noImage.jpg'){
-            Storage::delete('public/cover_images/'.$products->cover_image);
-        }
+    $p = Product::find($id);
+    $p->name = $request->input('name');
+    $p->price = $request->input('price');
+    $p->stock = $request->input('stock');
 
-        $products->delete();
-        return redirect('admin/products')->with('success', 'Product Removed');
+    $p->category = $request->input('category');
+    $p->desc = $request->input('description');
 
+    if($request->hasFile('cover_image')){
+      $p->cover_image = $fileNametoStore;
     }
+
+    $p->save();
+
+    return redirect('admin/products')->with('success', 'Product Updated');
+
+  }
+
+  /**
+  * Remove the specified resource from storage.
+  *
+  * @param  int  $id
+  * @return \Illuminate\Http\Response
+  */
+  public function destroy($id)
+  {
+
+
+    $products = Product::find($id);
+    if($products->cover_image != 'noImage.jpg'){
+      Storage::delete('public/cover_images/'.$products->cover_image);
+    }
+
+    $products->delete();
+    return redirect('admin/products')->with('success', 'Product Removed');
+
+  }
 }
