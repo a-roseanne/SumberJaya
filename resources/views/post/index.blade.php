@@ -2,18 +2,21 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-          @foreach($posts as $post)
-          <div class="card">
-              <div class="card-header">{{$post->title}}</div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
 
-              <div class="card-body">
-                <p>{{$post->content}}</p>
-              </div>
-          </div>
-          @endforeach
+      @foreach($post)
+      <div class="panel panel-default">
+        <div class="panel-heading"> {{$post->title}} </div>
+
+        <div class="panel-body">
+          <p>{{$post->content}}</p>
         </div>
+      </div>
+      @endforeach
+
+
     </div>
+  </div>
 </div>
 @endsection

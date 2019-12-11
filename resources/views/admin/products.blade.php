@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-Products    
+Products
 @endsection
 
-@section('content')    
+@section('content')
     <div class="float-right">
     <a href="/admin/products/create" class="btn btn-primary">Add Product</a>
     </div>
-    
+
     @if(count($products) > 0)
         <table class="table table-hover, mt-2">
             <thead>
@@ -22,16 +22,16 @@ Products
               </tr>
             </thead>
         @foreach($products as $p)
-        
+
             <tbody>
                 <tr>
                 <th scope="row"><a href="/admin/products/{{$p->id}}">{{$p->name}}</a></th>
                   <td>{{$p->price}}</td>
                   <td>
                       @if ($p->category== 0)
-                        <p>Bracket</p> 
+                        <p>Bracket</p>
                       @elseif ($p->category == 1)
-                        <p>Hanger</p> 
+                        <p>Hanger</p>
                       @elseif ($p->category == 2)
                         <p>Manekin</p>
                       @elseif ($p->category == 3)
@@ -56,8 +56,8 @@ Products
 
                 </tr>
             </tbody>
-            
-                
+
+
         @endforeach
         </table>
         {{$products->links()}}
@@ -68,4 +68,3 @@ Products
     @endif
 
 @endsection
-

@@ -14,7 +14,7 @@
 			<!-- Home Slider -->
 			<div class="home_slider_container">
 				<div class="owl-carousel owl-theme home_slider">
-					
+
 					<!-- Slide -->
 					<div class="owl-item">
 						<div class="background_image" style="background-image:url({{asset('img/s1.jpg')}})"></div>
@@ -74,9 +74,9 @@
 									</div>
 								</div>
 							</div>
-						</div>	
+						</div>
                     </div>
-                    
+
                     <!-- Slide -->
 					<div class="owl-item">
 						<div class="background_image" style="background-image:url({{asset('img/s1.jpg')}})"></div>
@@ -135,9 +135,9 @@
 									</div>
 								</div>
 							</div>
-						</div>	
+						</div>
                     </div>
-                    
+
                     <!-- Slide -->
 					<div class="owl-item">
 						<div class="background_image" style="background-image:url({{asset('img/s1.jpg')}})"></div>
@@ -196,9 +196,9 @@
 									</div>
 								</div>
 							</div>
-						</div>	
+						</div>
                     </div>
-                    
+
                     <!-- Slide -->
 					<div class="owl-item">
 						<div class="background_image" style="background-image:url({{asset('img/s1.jpg')}})"></div>
@@ -257,16 +257,16 @@
 									</div>
 								</div>
 							</div>
-						</div>	
+						</div>
 					</div>
 
-					
+
 				</div>
 				<div class="home_slider_nav home_slider_nav_prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
 				<div class="home_slider_nav home_slider_nav_next"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
 
 				<!-- Home Slider Dots -->
-				
+
 				<div class="home_slider_dots_container">
 					<div class="container">
 						<div class="row">
@@ -281,7 +281,7 @@
 								</div>
 							</div>
 						</div>
-					</div>	
+					</div>
 				</div>
 
 			</div>
@@ -289,7 +289,7 @@
 
 		<!-- Products -->
 
-		
+
 		<div class="products ml-3">
 				<div class="row">
 						<div class="col-lg-6 offset-lg-3">
@@ -299,7 +299,7 @@
 
 				@if(count($products) > 0)
 				@foreach($products as $p)
-    				<div class="col-xl-4 col-md-5 mt-3 d-inline-block">
+    				<div class="col-xl-3 col-md-5 mt-3 d-inline-block">
 						<div class="product">
 							<div class="product_image"><img src="/storage/cover_images/{{$p->cover_image}}" alt=""></div>
 							<div class="product_content">
@@ -310,9 +310,9 @@
 											<div class="product_category"><a href="category.html">
 												<a>
 													@if ($p->category== 0)
-													<p>Bracket</p> 
+													<p>Bracket</p>
 												  @elseif ($p->category == 1)
-													<p>Hanger</p> 
+													<p>Hanger</p>
 												  @elseif ($p->category == 2)
 													<p>Manekin</p>
 												  @elseif ($p->category == 3)
@@ -330,7 +330,7 @@
 								</div>
 								<div class="product_buttons">
 									<div class="text-right d-flex flex-row align-items-start justify-content-start">
-										
+
 										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
 											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
 										</div>
@@ -346,7 +346,7 @@
 					@else
         				<h5>Nothing here . . </h5>
     			@endif
-	
+
 				</div>
 				<div class="row load_more_row">
 					<div class="col">
@@ -361,7 +361,7 @@
 		<div class="features">
 			<div class="container">
 				<div class="row">
-					
+
 					<div class="col-lg-4 feature_col">
 						<div class="feature d-flex flex-row align-items-start justify-content-start">
 							<div class="feature_left">
@@ -400,8 +400,8 @@
 			</div>
 		</div>
 
-		
+
 	</div>
-		
+
 </div>
 @endsection
