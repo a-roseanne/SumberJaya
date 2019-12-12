@@ -90,7 +90,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="{{url('post')}}" class="nav-link">
+              <a href="{{url('admin/post')}}" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                   Blog Posts                {{-- <span class="right badge badge-danger">New</span> --}}

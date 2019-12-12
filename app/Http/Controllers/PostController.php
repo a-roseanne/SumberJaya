@@ -46,6 +46,18 @@ class PostController extends Controller
     return view('post.post')->with('post', $post);
   }
 
+  public function blog()
+  {
+    $post = Post::all();
+    return view('pages.blog')->with('post', $post);
+  }
+
+  public function show($id)
+  {
+    $post=Post::find($id);
+    return view('pages.post')->with('post', $post);
+  }
+
   public function edit($id)
   {
     $post = Post::find($id);
@@ -73,6 +85,11 @@ class PostController extends Controller
     $post->delete();
     return redirect()->route('post.post');
 
+  }
+
+  public function comments()
+  {
+    return $this->hasMany(Comment::class);
   }
 
 }
