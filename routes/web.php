@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
+
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/products', 'PagesController@products');
@@ -10,9 +14,10 @@ Route::get('/admin', 'ProductsController@admin');
 
 Route::resource('/admin/products', 'ProductsController');
 
-// Route::get('/admin/products/{id}', 'ProductsController@show');
-
-// Route::post('/admin/products/create', 'ProductsController@create');
+Route::get('/cart', 'PagesController@cart');
+Route::get('/add-to-cart/{id}', 'PagesController@addToCart');
+Route::patch('update-cart', 'PagesController@update');
+Route::delete('remove-from-cart', 'PagesController@remove');
 
 Auth::routes();
 

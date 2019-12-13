@@ -19,6 +19,9 @@
 		<link rel="stylesheet" type="text/css" href="{{asset('plugins/OwlCarousel2-2.2.1/animate.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{asset('styles/main_styles.css')}}">
 		<link rel="stylesheet" type="text/css" href="{{asset('styles/responsive.css')}}">
+
+
+		
 	</head>
 <body>
 
@@ -46,6 +49,7 @@
 			<li><a href="{{url('/admin')}}">Admin</a></li>
     </ul>
    </nav>
+
    <div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
     <!-- Search -->
     <div class="header_search">
@@ -54,12 +58,13 @@
 	  <button class="header_search_button"><img src="images/search.png" alt=""></button>
 	  
      </form>
-    </div>
+	</div>
+	
 	<!-- User -->
 	
     <div class="user"><a href="#"><div><img src="{{asset('images/user.svg')}}"><div>1</div></div></a></div>
     <!-- Cart -->
-    <div class="cart"><a href="cart.html"><div><img class="svg" src="{{asset('images/cart.svg')}}"></div></a></div>
+    <div class="cart"><a href="{{url('cart')}}"><div><img class="svg" src="{{asset('images/cart.svg')}}"></div></a></div>
     <!-- Phone -->
     <div class="header_phone d-flex flex-row align-items-center justify-content-start">
      <div><div><img src="{{asset('images/phone.svg')}}"></div></div>

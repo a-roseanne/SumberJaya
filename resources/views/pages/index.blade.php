@@ -4,7 +4,6 @@
 
 <div class="super_container">
 @section('content')
-
 	<div class="super_container_inner">
 		<div class="super_overlay"></div>
 
@@ -332,7 +331,7 @@
 									<div class="text-right d-flex flex-row align-items-start justify-content-start">
 
 										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-											<div><div><img src="images/cart.svg" class="svg" alt=""><div>+</div></div></div>
+											<div><div><a href="/add-to-cart/{{$p->id}}"><img src="images/cart.svg" class="svg" alt=""><div></div></div></div></a>
 										</div>
 										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
 											<div><div><a href="/products/{{$p->id}}"><img src="images/more.svg" class="svg" alt=""></a></div></div>
