@@ -53,9 +53,7 @@ class PagesController extends Controller
         $product = Product::find($id);
  
         if(!$product) {
- 
             abort(404);
- 
         }
  
         $cart = session()->get('cart');
@@ -147,9 +145,9 @@ class PagesController extends Controller
   * @param  int  $id
   * @return \Illuminate\Http\Response
   */
-  public function update(Request $request, $id)
-  {
-    if($request->id and $request->quantity)
+  public function update(Request $request)
+    {
+        if($request->id and $request->quantity)
         {
             $cart = session()->get('cart');
  
@@ -159,7 +157,7 @@ class PagesController extends Controller
  
             session()->flash('success', 'Cart updated successfully');
         }
-  }
+    }
  
     public function remove(Request $request)
     {

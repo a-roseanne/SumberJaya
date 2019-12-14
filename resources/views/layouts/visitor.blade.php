@@ -91,7 +91,7 @@
 	@else
 	<div class="header_phone d-flex flex-row align-items-center justify-content-start">
 			<div>
-					<li class="nav-item dropdown	" style="list-style-type: none">
+					<li class="nav-item dropdown" style="list-style-type: none">
 							<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 								{{ Auth::user()->name }} <span class="caret"></span>
 							</a>
