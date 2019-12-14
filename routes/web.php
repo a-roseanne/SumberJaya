@@ -4,11 +4,15 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
+
+
+
+Route::get('/products/find', 'PagesController@find');
+
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/products', 'PagesController@products');
 Route::get('/products/{id}', 'PagesController@show');
-Route::get('/products/find', 'PagesController@find');
 
 Route::get('/admin', 'ProductsController@admin');
 

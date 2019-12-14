@@ -18,9 +18,9 @@ class PagesController extends Controller
   public function find(Request $req)
   {
     $req = $req->find;
-    $products=Product::where('name', 'LIKE', '%' . $req . '%' );
+    $products=Product::where('name', 'LIKE', '%' . $req . '%' )->get();
     // $products = DB::table('products')->where('name','like',"%".$req."%");
-    $products->count();
+    
     return view('pages.products')->with('products', $products);
   }
 
@@ -32,10 +32,8 @@ class PagesController extends Controller
   public function products()
   {
     $products=Product::all();
-    return view('pages.products')->with('products', $products);
+    return view('pages.search')->with('products', $products);
   }
-
-
 
 
   public function show($id)

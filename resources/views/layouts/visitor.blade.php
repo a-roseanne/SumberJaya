@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -50,26 +51,69 @@
     </ul>
    </nav>
 
+	   
    <div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
     <!-- Search -->
     <div class="header_search">
-     <form action="{{url('products/find')}}" id="header_search_form" method="GET">
+     <form action="{{action('PagesController@find')}}" id="header_search_form" method="GET">
       <input type="text" name="find" class="search_input" placeholder="Search Item">
 	  <button class="header_search_button"><img src="images/search.png" alt=""></button>
-	  
      </form>
 	</div>
+
 	
-	<!-- User -->
-	
-    <div class="user"><a href="#"><div><img src="{{asset('images/user.svg')}}"><div>1</div></div></a></div>
+						
+	<div class="user"><a href="{{ route('register') }}"><div><img src="{{asset('images/user.svg')}}"></div></a></div>
     <!-- Cart -->
     <div class="cart"><a href="{{url('cart')}}"><div><img class="svg" src="{{asset('images/cart.svg')}}"></div></a></div>
     <!-- Phone -->
     <div class="header_phone d-flex flex-row align-items-center justify-content-start">
      <div><div><img src="{{asset('images/phone.svg')}}"></div></div>
      <div>0877 -0261 - 0777</div>
-    </div>
+	</div>
+	
+	<!-- User -->
+	@guest
+	<div class="header_phone d-flex flex-row align-items-center justify-content-start">
+		<div>
+			<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+		</div>
+	</div>
+	<div>
+		<div>
+				@if (Route::has('register'))
+				<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>               
+				@endif
+		</div>
+	</div>
+
+
+	@else
+	<div class="header_phone d-flex flex-row align-items-center justify-content-start">
+			<div>
+					<li class="nav-item dropdown	" style="list-style-type: none">
+							<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+								{{ Auth::user()->name }} <span class="caret"></span>
+							</a>
+					
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="{{ route('logout') }}"
+								   onclick="event.preventDefault();
+												 document.getElementById('logout-form').submit();">
+									{{ __('Logout') }}
+								</a>
+					
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									@csrf
+								</form>
+							</div>
+						</li>
+			</div>
+	</div>
+	
+		@endguest
+
+
    </div>
   </div>
  </header>
