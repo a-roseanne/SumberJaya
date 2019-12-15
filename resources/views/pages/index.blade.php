@@ -27,7 +27,7 @@
 											<div class="home_items">
 												<div class="row">
 													<div class="col-sm-3 offset-lg-1">
-														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/two.jpg')}}" alt=""></a></div>
+														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/m1.jpg')}}" alt=""></a></div>
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
 														<div class="product home_item_large">
@@ -37,35 +37,17 @@
 																	<div>Rp 85<span>k</span></div>
 																</div>
 															</div>
-															<div class="product_image"><img src="{{asset('img/four.jpg')}}" alt=""></div>
+															<div class="product_image"><img src="{{asset('img/two.jpg')}}" alt=""></div>
 															<div class="product_content">
 																<div class="product_info d-flex flex-row align-items-start justify-content-start">
-																	<div>
-																		<div>
-																			<div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-																			<div class="product_category">In <a href="category.html">Category</a></div>
-																		</div>
-																	</div>
-																	<div class="ml-auto text-right">
-																		<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-																		<div class="product_price text-right">$3<span>.99</span></div>
-																	</div>
+																	
 																</div>
-																<div class="product_buttons">
-																	<div class="text-right d-flex flex-row align-items-start justify-content-start">
-																		<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-																			<div><div><img src="{{asset('img/two.jpg')}}" alt=""><div>+</div></div></div>
-																		</div>
-																		<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-																			<div><div><img src="{{asset('img/two.jpg')}}" alt=""><div>+</div></div></div>
-																		</div>
-																	</div>
-																</div>
+																
 															</div>
 														</div>
 													</div>
 													<div class="col-sm-3">
-														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/two.jpg')}}" alt=""></a></div>
+														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/b2.jpg')}}" alt=""></a></div>
 													</div>
 												</div>
 											</div>
@@ -88,7 +70,7 @@
 											<div class="home_items">
 												<div class="row">
 													<div class="col-sm-3 offset-lg-1">
-														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/two.jpg')}}" alt=""></a></div>
+														<div class="home_item_side"><a href="{{url('/products')}}"><img src="{{asset('img/two.jpg')}}" alt=""></a></div>
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
 														<div class="product home_item_large">
@@ -104,7 +86,7 @@
 																	<div>
 																		<div>
 																			<div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-																			<div class="product_category">In <a href="category.html">Category</a></div>
+																			<div class="product_category">In <a href="{{url('/products')}}">Category</a></div>
 																		</div>
 																	</div>
 																	<div class="ml-auto text-right">
@@ -149,45 +131,17 @@
 											<div class="home_items">
 												<div class="row">
 													<div class="col-sm-3 offset-lg-1">
-														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/two.jpg')}}" alt=""></a></div>
+														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/m1.jpg')}}" alt=""></a></div>
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
 														<div class="product home_item_large">
-															<div class="product_tag d-flex flex-column align-items-center justify-content-center">
-																<div>
-																	<div>from</div>
-																	<div>Rp 85<span>k</span></div>
-																</div>
-															</div>
-															<div class="product_image"><img src="{{asset('img/four.jpg')}}" alt=""></div>
-															<div class="product_content">
-																<div class="product_info d-flex flex-row align-items-start justify-content-start">
-																	<div>
-																		<div>
-																			<div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-																			<div class="product_category">In <a href="category.html">Category</a></div>
-																		</div>
-																	</div>
-																	<div class="ml-auto text-right">
-																		<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-																		<div class="product_price text-right">$3<span>.99</span></div>
-																	</div>
-																</div>
-																<div class="product_buttons">
-																	<div class="text-right d-flex flex-row align-items-start justify-content-start">
-																		<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-																			<div><div><img src="{{asset('img/two.jpg')}}" alt=""><div>+</div></div></div>
-																		</div>
-																		<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-																			<div><div><img src="{{asset('img/two.jpg')}}" alt=""><div>+</div></div></div>
-																		</div>
-																	</div>
-																</div>
-															</div>
+															
+															<div class="product_image"><img src="{{asset('img/m2.jpg')}}" alt=""></div>
+															
 														</div>
 													</div>
 													<div class="col-sm-3">
-														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/two.jpg')}}" alt=""></a></div>
+														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/m3.jpg')}}" alt=""></a></div>
 													</div>
 												</div>
 											</div>
@@ -210,45 +164,19 @@
 											<div class="home_items">
 												<div class="row">
 													<div class="col-sm-3 offset-lg-1">
-														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/two.jpg')}}" alt=""></a></div>
+														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/b1.jpg')}}" alt=""></a></div>
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0">
 														<div class="product home_item_large">
-															<div class="product_tag d-flex flex-column align-items-center justify-content-center">
-																<div>
-																	<div>from</div>
-																	<div>Rp 85<span>k</span></div>
-																</div>
-															</div>
-															<div class="product_image"><img src="{{asset('img/four.jpg')}}" alt=""></div>
+															
+															<div class="product_image"><img src="{{asset('img/b2.jpg')}}" alt=""></div>
 															<div class="product_content">
-																<div class="product_info d-flex flex-row align-items-start justify-content-start">
-																	<div>
-																		<div>
-																			<div class="product_name"><a href="product.html">Cool Clothing with Brown Stripes</a></div>
-																			<div class="product_category">In <a href="category.html">Category</a></div>
-																		</div>
-																	</div>
-																	<div class="ml-auto text-right">
-																		<div class="rating_r rating_r_4 home_item_rating"><i></i><i></i><i></i><i></i><i></i></div>
-																		<div class="product_price text-right">$3<span>.99</span></div>
-																	</div>
-																</div>
-																<div class="product_buttons">
-																	<div class="text-right d-flex flex-row align-items-start justify-content-start">
-																		<div class="product_button product_fav text-center d-flex flex-column align-items-center justify-content-center">
-																			<div><div><img src="{{asset('img/two.jpg')}}" alt=""><div>+</div></div></div>
-																		</div>
-																		<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-																			<div><div><img src="{{asset('img/two.jpg')}}" alt=""><div>+</div></div></div>
-																		</div>
-																	</div>
-																</div>
+																
 															</div>
 														</div>
 													</div>
 													<div class="col-sm-3">
-														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/two.jpg')}}" alt=""></a></div>
+														<div class="home_item_side"><a href="product.html"><img src="{{asset('img/b3.jpg')}}" alt=""></a></div>
 													</div>
 												</div>
 											</div>
@@ -289,7 +217,7 @@
 		<!-- Products -->
 
 
-		<div class="products ml-3">
+		<div class="products ml-5">
 				<div class="row">
 						<div class="col-lg-6 offset-lg-3">
 						  <div class="section_title text-center">Lengkapi Toko Anda Sekarang!</div>
@@ -298,7 +226,7 @@
 
 				@if(count($products) > 0)
 				@foreach($products as $p)
-    				<div class="col-xl-3 col-md-5 mt-3 d-inline-block">
+    				<div class="col-xl-3 col-md-3 mt-3 ml-5 d-inline-block">
 						<div class="product">
 							<div class="product_image"><img src="/storage/cover_images/{{$p->cover_image}}" alt=""></div>
 							<div class="product_content">
@@ -324,7 +252,7 @@
 										</div>
 									</div>
 									<div class="ml-auto text-right">
-										<div class="product_price text-right">Rp {{$p->price}}</div>
+										<div class="product_price text-right">{{$p->price}}</div>
 									</div>
 								</div>
 								<div class="product_buttons">

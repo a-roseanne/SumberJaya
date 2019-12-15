@@ -14,7 +14,7 @@
       <div class="col ">
         <div class="page_nav">
           <ul class="d-flex flex-row align-items-start justify-content-center">
-            <li class="active"><a href="category.html">Bracket</a></li>
+            <li><a href="category.html">Bracket</a></li>
             <li><a href="category.html">Hanger</a></li>
             <li><a href="category.html">Manekin</a></li>
             <li><a href="category.html">Rack</a></li>
@@ -40,10 +40,13 @@
                 </div>
               </div>
         @endforeach
-        </table>
+  
     @else
         <h5>Nothing here . . </h5>
     @endif
 </div>
-
+         
+<br>
+<br>
+     
 @endsection

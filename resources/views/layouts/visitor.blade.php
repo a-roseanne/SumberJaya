@@ -47,7 +47,7 @@
 			<li><a href="{{url('/about')}}">About</a></li>
 			<li><a href="{{url('/post')}}">Blog</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
-			<li><a href="{{url('/admin')}}">Admin</a></li>
+			{{-- <li><a href="{{url('/admin')}}">Admin</a></li> --}}
     </ul>
    </nav>
 
@@ -63,7 +63,7 @@
 
 	
 						
-	<div class="user"><a href="{{ route('register') }}"><div><img src="{{asset('images/user.svg')}}"></div></a></div>
+	{{-- <div class="user"><a href="{{ route('register') }}"><div><img src="{{asset('images/user.svg')}}"></div></a></div> --}}
     <!-- Cart -->
     <div class="cart"><a href="{{url('cart')}}"><div><img class="svg" src="{{asset('images/cart.svg')}}"></div></a></div>
     <!-- Phone -->
@@ -137,7 +137,7 @@
 			<li><a href="{{url('/about')}}">About</a></li>
 			<li><a href="{{url('/cart')}}">Cart</a></li>
 			<li><a href="{{url('/post')}}">Blogs</a></li>
-			<li><a href="{{url('/admin')}}">Admin</a></li>
+			{{-- <li><a href="{{url('/admin')}}">Admin</a></li> --}}
 
 		</ul>
 	</div>
@@ -194,7 +194,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer_bar">
+			<div class="footer_bar" style="margin-bottom : -170px">
 				<div class="container">
 					<div class="row">
 						<div class="col">
